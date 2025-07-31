@@ -1,0 +1,60 @@
+import numpy as np
+
+def logisticeq(X):
+    X = 4*X*(1 - X)
+    return X
+
+I1 = float(input("Enter I1(0 or 1): "))
+I2 = float(input("Enter I2(0 or 1): "))
+
+if I1 == 0 :
+    I1 = 0.82
+if I1 == 1:
+    I1 = 0.86
+if I2 == 0 :
+    I2 = 0.82
+if I2 == 1:
+    I2 = 0.86
+
+X = np.zeros(2)
+X[0] = I1
+X[1] = I2
+
+#Calculation of D's
+def main(I1,I2):
+    for i in range(0 , 1000):
+        if I1 < 0.84 :
+          excess1 = 0
+          X[0] = logisticeq(X[0])
+          I1 = X[0]
+          
+        
+     
+        if I1 > 0.84 :
+          excess1 = X[0] - 0.84
+          X[0] = 0.84
+          I1 = X[0]
+          
+
+
+        if I2 < 0.84 :
+          excess2 = 0
+          X[1] = logisticeq(X[1]) + excess1
+          I2 = X[1]
+          
+        
+     
+        if I2 > 0.84 :
+          excess2 = X[1]  - 0.84 
+          X[1] = logisticeq(X[1]) + excess1
+          X[1] = 0.84
+          I2 = X[1]
+         
+    return excess2 
+
+output = main(I1 , I2)
+print("AND gate output :  ")
+if output < 0.14 :
+    print("1")
+if output > 0.14 :
+    print("0")
