@@ -10,6 +10,10 @@ To run the code clone the repo and use it directly in VS code , for the SLX file
 
 ## AND and NOR Gate
 docs > open the pdf
+(NOR and AND Gate works on the same theory)
+
+
+Sinha, S., & Ditto, W. L. (1998). Dynamics based computation. Physical Review Letters, 81(10), 2156–2159.
 ## Standard Map
 docs > open the pdf
 
