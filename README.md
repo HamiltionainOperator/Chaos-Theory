@@ -1,8 +1,11 @@
 # Chaos Theory
 
-Here in this repository I have made it to store my projects related to my work on Chaos Theory. 
-I'll walk you through the files 
+Check the docs folder for detailed Theory 
 
-# AND Gate
+Open the pdfs to look at it 
+
+To run the code clone the repo and use it directly in VS code , for the SLX file use it in Matlab 
+
+if you ran into any issue contact : yasht24@iiserb.ac.in
 
 
